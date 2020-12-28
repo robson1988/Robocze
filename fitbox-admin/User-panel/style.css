@@ -1,0 +1,139 @@
+/*Fonts*/
+@font-face {
+  font-family: 'AmaticSC';
+  font-display: swap;
+  src:url('../Fonts/AmaticSC-Bold.ttf');
+  }
+  @font-face {
+    font-family: 'Slabo';
+    font-display: swap;
+    src:url('../Fonts/Slabo-Regular.ttf');
+    }
+    @font-face {
+      font-family: 'seymour';
+      font-display: swap;
+      src:url('../Fonts/SeymourOne-Regular.ttf');
+      }
+
+/***Global styling***/
+html {scroll-behavior: smooth;}
+.font-amatic{font-family: 'AmaticSC'; color:#edede5;}
+.font-slabo{font-family: 'Slabo'; color:#edede5;}
+.font-seymour{font-family: 'Seymour';}
+p.text-diet{padding:0 1em; text-align:center; font-size:1.2em;}
+.font-big{font-size:1.3em;}
+.thick{font-weight: 500;}
+.font-black{color:#000;}
+a.link{color:#f07d00;}
+a.link:hover{color:#f07d00;}
+
+/*Order page*/
+.order-body{padding:0;height:100vh;background-color: #f5f5f5;font-family: 'Slabo'; color:#1b1b1b;}
+.container-fluid{padding:0;}
+.order-header{width:100%; height:140px; background-color:#edede5; border-bottom:2px solid #f07d00; }
+.order-logo {width:110px;height:110px;position:absolute;top:15px;left:40px;display:inline-block;}
+.order-form{max-width:700px; background-color:#fff;border-radius: 5px; margin-bottom:15px;padding: 20px 30px 40px 30px;box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);}
+.show-diet, .show-kcal{display:none;}
+h1.order-heading{text-align:center;color:#1b1b1b; font-family:'AmaticSC';font-size:3.3em;padding-top:35px;}
+.order-content{position:relative;}
+img.order-image-left{position:absolute;left:0px;top:200px;}
+img.order-image-right{position:absolute;right:0px;top:0px;}
+span.red-star{color:red;}
+.order-logo{left:20px;}
+.info-diet{color:#1b1b1b; font-size:.8em;}
+/* hide radio*/
+[type=radio] {
+  position: absolute;opacity: 0;width: 0;height: 0;
+}
+/* image radio style */
+[type=radio] + img {
+cursor: pointer; max-width:150px;
+}
+/* checked radio style */
+[type=radio]:checked + img {
+  outline: 1px solid #f07d00;
+}
+.select-payment{
+padding-top: 1px; text-align: center;
+}
+
+
+/***Form inputs styling***/
+.form-group {position:relative;& + .form-group {margin-top: 30px;}}
+.form-label {position: absolute;left:10px;top:5px;color:#1b1b1b;background-color:#fff;z-index: 1;transition: transform 150ms ease-out, font-size 150ms ease-out;}
+/*.focused*/ .form-label {transform: translateY(-80%);font-size:.8em;}
+.form-input {position: relative;padding: 12px 0px 5px 10px;width: calc(100% - 25px);outline: 0;border: 0;box-shadow: 0 1px 0 0 #e5e5e5;}
+.form-input:focus {box-shadow: 0 2px 0 0 #f07d00;}
+.form-input.filled {box-shadow: 0 2px 0 0 lightgreen; }
+input[value]:not([value=""]) {
+box-shadow: 0 2px 0 0 lightgreen;
+}
+#startDate{background-color: #fff;color:#1b1b1b;}
+#startDateSirt{background-color: #fff;color:#1b1b1b;}
+.form-control select {border:2px solid #f07d00;}
+.form-control:focus {border:2px solid #f07d00;outline: 0;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 2px #f07d00;box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 2px #f07d00;}
+.form-control:active {border:2px solid #f07d00;}
+.flatpickr-weekdays, .flatpickr-month, .flatpickr-weekday{background:#f07d00!important; color:#fff!important; }
+.order-form-info{font-family: 'AmaticSC'; font-size:2.2em;text-align:center;padding:.7em 0 .7em 0;color:#1b1b1b;}
+.order-form-recipe{font-family: 'AmaticSC'; font-size:1.8em;text-align:left;padding:.5em 0 0em 0;color:#1b1b1b;}
+i.fa-question-circle{color:#f07d00;}
+.btn-tooltip{padding:0;}
+.btn:focus{box-shadow: none;}
+
+/*** Button ***/
+.slide-in{padding:0;width:200px; height:38px;overflow:hidden;position:relative;margin-left:auto;}
+.btn-zamow{width:200px; height:42px; border-radius: 0; background-color:#f07d00; color:#fff;font-weight:800;}
+.slide-eff{width: 30px;height:43px;transform: skew(-50deg);background: rgba(255,255,255,0.6); background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+position: absolute;top:0;left:-60px;animation-name:slide-in;animation-duration: .5s;animation-timing-function: ease;animation-iteration-count: 1;display:none;}
+.slide-in:hover .slide-eff{display:block;}
+.btn-zamow:hover{color:#1b1b1b;}
+@keyframes slide-in {
+  from {left: -60px;}
+  to {left: 300px;}
+}
+
+/*** Details section***/
+
+.nav-pills .nav-link.active, .btn-checkout{background-color: #f07d00;border-radius: 0;}
+a.nav-link{color:#1b1b1b;}
+
+
+
+/*** ***/
+.sticky-top{top: .5em;}
+
+/*** Cart section ***/
+h2.order-heading {color:#1b1b1b; font-family:'slabo';font-size:1.8em;}
+.thumbnail-image{width:30px;}
+.hidden{display: none;}
+.table thead th{margin-bottom:0px;border-bottom:0px;}
+.amount, p.amount, h4.amount{font-size:1.2em; margin-bottom:0;line-height:1.2em;font-weight:500;}
+.summary-two::after {content:'';border-bottom:1px solid rgba(0,0,0,.125); width:55%; margin-right:21px;margin-left:auto;}
+p.amount-total{font-size:1.8rem;}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {background-color: #edede5;}
+.slide-in-checkout{padding:0;margin:20px 0 0 0; width:100%; height:42px;overflow:hidden;position:relative;}
+.btn-checkout{width:100%; height:42px; border-radius: 0; background-color:#f07d00; color:#fff;font-weight:800;}
+.slide-eff-checkout{width: 30px;height:43px;transform: skew(-50deg);background: rgba(255,255,255,0.6); background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); background: linear-gradient(to bottom,  #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);
+position: absolute;top:0;left:-60px;animation-name:slide-in-checkout;animation-duration: .5s;animation-timing-function: ease;animation-iteration-count: 1;display:none;}
+.slide-in-checkout:hover .slide-eff-checkout{display:block;}
+@keyframes slide-in-checkout {
+  from {left: -60px;}
+  to {left: 500px;}
+}
+
+/*Diet page*/
+.diets, .table-responsive, .details{background-color: #fff; border-radius:5px;padding: 10px 0;box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);}
+.all-diets .card-body {height:100%; position:relative;border:none; background-color: transparent;}
+.my-acount-tab{min-height:77vh;}
+
+.all-diets p.card-text, ul.card-text{color:#1b1b1b;}
+.all-diets p.card-text{margin:0;}
+.all-diets .diet-button{position:absolute;right:20px;bottom:20px;}
+.all-diets .card-body h3{height:80px; line-height: 80px;margin:0;padding:0;color:#f07d00; font-weight:800;position:relative;}
+.all-diets .card-body h3::after{content:'';width:130px;height:10px;border-bottom:2px solid #f07d00;position:absolute;bottom:15px;left:0;}
+.all-diets .img-fluid{max-width: 85%;}
+h2.our-diet-small{text-align:center;color:#edede5;line-height:1.3em;font-size:2.8em;}
+p.card-text a:hover{text-decoration:none;}
+p.text-diet-page, ul.text-diet-page, ol.text-diet-page{font-size:1.2em;}
